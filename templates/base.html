@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}Афиша мероприятий{% endblock %}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar__in">
+    <a class="logo" href="{{ url_for('catalog') }}">
+      <span class="logo__mark">А</span>
+      <span class="logo__text">Афиша<b>мероприятий</b></span>
+    </a>
+    <nav class="nav">
+      <a class="nav__catalog" href="{{ url_for('catalog') }}">Каталог</a>
+      {% if user %}
+        <a href="{{ url_for('profile') }}">Личный кабинет</a>
+        {% if user.role == 'admin' %}
+          <a href="{{ url_for('admin') }}">Админ-панель</a>
+        {% endif %}
+        <span class="nav__user">{{ user.full_name.split()[0] }} {{ user.full_name.split()[1][0] }}.</span>
+        <a class="btn btn--ghost" href="{{ url_for('logout') }}">Выйти</a>
+      {% else %}
+        <a href="{{ url_for('login') }}">Вход</a>
+        <a class="btn" href="{{ url_for('register') }}">Регистрация</a>
+      {% endif %}
+    </nav>
+  </div>
+</header>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <div class="wrap flashes">
+      {% for cat, msg in messages %}<div class="flash flash--{{ cat }}">{{ msg }}</div>{% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+
+<main class="wrap">{% block content %}{% endblock %}</main>
+
+<footer class="footer">
+  <div class="wrap footer__in">
+    <span>Афиша мероприятий &copy; {{ now.year }}</span>
+    <span>Курсовой проект по МДК.09.01 &middot; Передрий А. В., 4ИСИП-1023</span>
+  </div>
+</footer>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% from '_card.html' import card %}
+{% block content %}
+
+<section class="hero">
+  <h1>Куда пойти{% if f.city %} в {{ (cities|selectattr('slug','equalto',f.city)|first).name }}{% endif %}</h1>
+  <p>Концерты, выставки и мастер-классы в шести городах. Выберите даты — и&nbsp;увидите только то, что проходит в&nbsp;этот период.</p>
+</section>
+
+<form class="filters" id="filters" method="get" action="{{ url_for('catalog') }}">
+  <div class="filters__row filters__row--presets">
+    {% for key, label in presets %}
+      <label class="chip {% if f.period == key %}is-on{% endif %}">
+        <input type="radio" name="period" value="{{ key }}" {% if f.period == key %}checked{% endif %}>
+        {{ label }}
+      </label>
+    {% endfor %}
+  </div>
+
+  <div class="filters__row">
+    <div class="field field--dates">
+      <span class="field__label">Период</span>
+      <div class="dates">
+        <input type="date" name="date_from" value="{{ f.date_from }}" aria-label="Дата начала">
+        <i>&mdash;</i>
+        <input type="date" name="date_to" value="{{ f.date_to }}" aria-label="Дата окончания">
+      </div>
+    </div>
+    <label class="field">
+      <span class="field__label">Город</span>
+      <select name="city">
+        <option value="">Все города</option>
+        {% for c in cities %}
+          <option value="{{ c.slug }}" {% if f.city == c.slug %}selected{% endif %}>{{ c.name }}</option>
+        {% endfor %}
+      </select>
+    </label>
+    <label class="field">
+      <span class="field__label">Категория</span>
+      <select name="category">
+        <option value="">Все категории</option>
+        {% for c in categories %}
+          <option value="{{ c.slug }}" {% if f.category == c.slug %}selected{% endif %}>{{ c.name }}</option>
+        {% endfor %}
+      </select>
+    </label>
+    <label class="field">
+      <span class="field__label">Сортировка</span>
+      <select name="sort">
+        <option value="date" {% if f.sort=='date' %}selected{% endif %}>По дате</option>
+        <option value="price" {% if f.sort=='price' %}selected{% endif %}>По цене</option>
+        <option value="popular" {% if f.sort=='popular' %}selected{% endif %}>По популярности</option>
+      </select>
+    </label>
+    <label class="field field--grow">
+      <span class="field__label">Поиск</span>
+      <input type="search" name="q" value="{{ f.q }}" placeholder="Название или место проведения">
+    </label>
+  </div>
+
+  <div class="filters__row filters__row--foot">
+    <label class="check">
+      <input type="checkbox" name="free" value="1" {% if f.free %}checked{% endif %}>
+      <span>Только бесплатные</span>
+    </label>
+    <div class="filters__actions">
+      <a class="btn btn--ghost" href="{{ url_for('catalog') }}">Сбросить</a>
+      <button class="btn" type="submit">Показать</button>
+    </div>
+  </div>
+</form>
+
+<div class="results">
+  <h2 class="results__title">Найдено мероприятий: <b id="count">{{ events|length }}</b></h2>
+</div>
+
+{% if events %}
+  <div class="grid" id="grid">
+    {% for e in events %}{{ card(e, favs) }}{% endfor %}
+  </div>
+{% else %}
+  <div class="empty">
+    <p><b>По заданным условиям мероприятий не найдено.</b></p>
+    <p>Попробуйте расширить период или снять фильтр по городу и категории.</p>
+  </div>
+{% endif %}
+{% endblock %}

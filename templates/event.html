@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% from '_card.html' import card %}
+{% block title %}{{ event.title }} — Афиша мероприятий{% endblock %}
+{% block content %}
+<nav class="crumbs">
+  <a href="{{ url_for('catalog') }}">Каталог</a> /
+  <a href="{{ url_for('catalog', category=event.category_slug) }}">{{ event.category }}</a> /
+  <span>{{ event.title }}</span>
+</nav>
+
+<article class="event">
+  <div class="event__cover" style="--accent: {{ event.accent }}">
+    <span class="card__cat">{{ event.category }}</span>
+    {% if event.status != 'published' %}<span class="badge badge--{{ event.status }}">{{ event.status|status }}</span>{% endif %}
+  </div>
+  <div class="event__main">
+    <h1>{{ event.title }}</h1>
+    <p class="event__lead">{{ event.summary }}</p>
+    <p class="event__text">{{ event.description }}</p>
+  </div>
+  <aside class="event__side">
+    <dl class="specs">
+      <dt>Дата и время</dt><dd>{{ event.starts_at|rudate(with_year=True) }}</dd>
+      <dt>Окончание</dt><dd>{{ event.ends_at|rudate }}</dd>
+      <dt>Город</dt><dd>{{ event.city }}</dd>
+      <dt>Место</dt><dd>{{ event.venue }}<br><small>{{ event.address }}</small></dd>
+      <dt>Возраст</dt><dd>{% if event.age_limit %}{{ event.age_limit }}+{% else %}без ограничений{% endif %}</dd>
+      <dt>Стоимость</dt><dd class="specs__price">{{ event|price }}</dd>
+    </dl>
+    <button class="fav fav--big {% if event.id in favs %}is-on{% endif %}"
+            data-event="{{ event.id }}" type="button">
+      <span class="fav__ico">&#10003;</span>
+      <span class="fav__label">Пойду</span>
+      <span class="fav__count">{{ event.fav_count }}</span>
+    </button>
+    {% if user %}
+    <form class="visit" method="post" action="{{ url_for('mark_visit', event_id=event.id) }}">
+      <span class="visit__label">Отметить посещение</span>
+      <div class="visit__row">
+        <select name="rating" aria-label="Оценка">
+          <option value="">Оценка</option>
+          {% for i in range(5, 0, -1) %}<option value="{{ i }}">{{ i }}</option>{% endfor %}
+        </select>
+        <button class="btn btn--ghost" type="submit">Добавить в историю</button>
+      </div>
+      <input type="text" name="comment" placeholder="Короткий отзыв">
+    </form>
+    {% endif %}
+  </aside>
+</article>
+
+{% if similar %}
+<h2 class="section-h">Похожие мероприятия</h2>
+<div class="grid">{% for e in similar %}{{ card(e, favs, compact=True) }}{% endfor %}</div>
+{% endif %}
+{% endblock %}

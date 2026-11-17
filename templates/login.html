@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}Вход — Афиша мероприятий{% endblock %}
+{% block content %}
+<div class="auth">
+  <h1>Вход в личный кабинет</h1>
+  <p class="auth__lead">Войдите, чтобы сохранять мероприятия в список «Пойду» и&nbsp;вести историю посещений.</p>
+  <form class="form" method="post">
+    <label class="field">
+      <span class="field__label">Электронная почта</span>
+      <input type="email" name="email" required autofocus placeholder="user@mail.ru">
+    </label>
+    <label class="field">
+      <span class="field__label">Пароль</span>
+      <input type="password" name="password" required>
+    </label>
+    <button class="btn btn--wide" type="submit">Войти</button>
+  </form>
+  <p class="auth__alt">Нет учётной записи? <a href="{{ url_for('register') }}">Зарегистрируйтесь</a></p>
+  <div class="auth__demo">
+    <b>Демонстрационные учётные записи</b>
+    <span>Пользователь: maria@mail.ru / user123</span>
+    <span>Администратор: admin@afisha.ru / admin123</span>
+  </div>
+</div>
+{% endblock %}

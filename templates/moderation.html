@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title %}Модерация — Афиша мероприятий{% endblock %}
+{% block content %}
+<section class="cab-head">
+  <div><h1>Модерация мероприятий</h1>
+    <p>Заявки организаторов, ожидающие проверки: {{ pending|length }}</p></div>
+  <a class="btn btn--ghost" href="{{ url_for('admin') }}">К списку мероприятий</a>
+</section>
+
+{% if pending %}
+<div class="mod-list">
+  {% for e in pending %}
+  <article class="mod">
+    <div class="mod__head">
+      <span class="tag" style="--accent: {{ e.accent }}">{{ e.category }}</span>
+      <h3>{{ e.title }}</h3>
+      <span class="badge badge--pending">На модерации</span>
+    </div>
+    <p class="mod__meta">{{ e.starts_at|rudate(with_year=True) }} &middot; {{ e.city }},
+      {{ e.venue }} &middot; {{ e|price }}</p>
+    <p class="mod__sum">{{ e.summary }}</p>
+    <div class="mod__acts">
+      <form method="post" action="{{ url_for('moderate', event_id=e.id, action='publish') }}">
+        <button class="btn" type="submit">Опубликовать</button>
+      </form>
+      <form method="post" action="{{ url_for('moderate', event_id=e.id, action='reject') }}" class="mod__reject">
+        <input type="text" name="reason" placeholder="Причина отклонения">
+        <button class="btn btn--danger" type="submit">Отклонить</button>
+      </form>
+      <a class="btn btn--ghost" href="{{ url_for('event_edit', event_id=e.id) }}">Изменить</a>
+    </div>
+  </article>
+  {% endfor %}
+</div>
+{% else %}
+<div class="empty"><p><b>Заявок на модерации нет.</b></p></div>
+{% endif %}
+
+{% if rejected %}
+<h2 class="section-h">Отклонённые заявки</h2>
+<table class="table">
+  <thead><tr><th>№</th><th>Название</th><th>Город</th><th>Причина отклонения</th><th>Действие</th></tr></thead>
+  <tbody>
+  {% for e in rejected %}
+    <tr><td>{{ e.id }}</td><td>{{ e.title }}</td><td>{{ e.city }}</td>
+      <td class="muted">{{ e.reject_reason }}</td>
+      <td><form method="post" action="{{ url_for('moderate', event_id=e.id, action='publish') }}">
+        <button class="link" type="submit">Опубликовать</button></form></td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}Регистрация — Афиша мероприятий{% endblock %}
+{% block content %}
+<div class="auth">
+  <h1>Регистрация</h1>
+  <p class="auth__lead">Создайте учётную запись, чтобы планировать посещение мероприятий.</p>
+  <form class="form" method="post">
+    <label class="field">
+      <span class="field__label">Фамилия, имя и отчество</span>
+      <input type="text" name="full_name" required minlength="3" placeholder="Иванов Иван Иванович">
+    </label>
+    <label class="field">
+      <span class="field__label">Электронная почта</span>
+      <input type="email" name="email" required placeholder="user@mail.ru">
+    </label>
+    <label class="field">
+      <span class="field__label">Пароль (не менее 6 символов)</span>
+      <input type="password" name="password" required minlength="6">
+    </label>
+    <label class="field">
+      <span class="field__label">Город по умолчанию</span>
+      <select name="city_id">
+        {% for c in cities %}<option value="{{ c.id }}">{{ c.name }}</option>{% endfor %}
+      </select>
+    </label>
+    <button class="btn btn--wide" type="submit">Зарегистрироваться</button>
+  </form>
+  <p class="auth__alt">Уже есть учётная запись? <a href="{{ url_for('login') }}">Войдите</a></p>
+</div>
+{% endblock %}

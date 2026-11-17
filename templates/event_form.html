@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block title %}{% if event %}Изменение{% else %}Добавление{% endif %} мероприятия{% endblock %}
+{% block content %}
+<section class="cab-head">
+  <div><h1>{% if event %}Изменение мероприятия №{{ event.id }}{% else %}Добавление мероприятия{% endif %}</h1>
+    <p>Поля, отмеченные звёздочкой, обязательны для заполнения</p></div>
+  <a class="btn btn--ghost" href="{{ url_for('admin') }}">Отмена</a>
+</section>
+
+<form class="form form--event" method="post">
+  <div class="form__grid">
+    <label class="field field--span2">
+      <span class="field__label">Название мероприятия *</span>
+      <input type="text" name="title" required minlength="5"
+             value="{{ event.title if event else '' }}">
+    </label>
+    <label class="field">
+      <span class="field__label">Категория *</span>
+      <select name="category_id" required>
+        {% for c in categories %}
+          <option value="{{ c.id }}" {% if event and event.category_id == c.id %}selected{% endif %}>{{ c.name }}</option>
+        {% endfor %}
+      </select>
+    </label>
+    <label class="field">
+      <span class="field__label">Город *</span>
+      <select name="city_id" required>
+        {% for c in cities %}
+          <option value="{{ c.id }}" {% if event and event.city_id == c.id %}selected{% endif %}>{{ c.name }}</option>
+        {% endfor %}
+      </select>
+    </label>
+    <label class="field">
+      <span class="field__label">Начало *</span>
+      <input type="datetime-local" name="starts_at" required
+             value="{{ (event.starts_at|replace(' ','T')) if event else '' }}">
+    </label>
+    <label class="field">
+      <span class="field__label">Окончание</span>
+      <input type="datetime-local" name="ends_at"
+             value="{{ (event.ends_at|replace(' ','T')) if event and event.ends_at else '' }}">
+    </label>
+    <label class="field field--span2">
+      <span class="field__label">Место проведения *</span>
+      <input type="text" name="venue" required value="{{ event.venue if event else '' }}">
+    </label>
+    <label class="field field--span2">
+      <span class="field__label">Адрес</span>
+      <input type="text" name="address" value="{{ event.address if event else '' }}">
+    </label>
+    <label class="field">
+      <span class="field__label">Цена билета, &#8381;</span>
+      <input type="number" name="price_min" min="0" step="50"
+             value="{{ event.price_min if event else 0 }}">
+    </label>
+    <label class="field">
+      <span class="field__label">Возрастное ограничение</span>
+      <input type="number" name="age_limit" min="0" max="21"
+             value="{{ event.age_limit if event else 0 }}">
+    </label>
+    <label class="check check--inline">
+      <input type="checkbox" name="is_free" value="1" {% if event and event.is_free %}checked{% endif %}>
+      <span>Бесплатное мероприятие</span>
+    </label>
+    <label class="field">
+      <span class="field__label">Статус</span>
+      <select name="status">
+        {% for key, label in [('published','Опубликовано'), ('pending','На модерации'), ('rejected','Отклонено')] %}
+          <option value="{{ key }}" {% if event and event.status == key %}selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+      </select>
+    </label>
+    <label class="field field--span4">
+      <span class="field__label">Краткое описание (анонс)</span>
+      <textarea name="summary" rows="2">{{ event.summary if event else '' }}</textarea>
+    </label>
+    <label class="field field--span4">
+      <span class="field__label">Полное описание</span>
+      <textarea name="description" rows="5">{{ event.description if event else '' }}</textarea>
+    </label>
+  </div>
+  <div class="form__foot">
+    <button class="btn" type="submit">Сохранить</button>
+    <a class="btn btn--ghost" href="{{ url_for('admin') }}">Отмена</a>
+  </div>
+</form>
+{% endblock %}
