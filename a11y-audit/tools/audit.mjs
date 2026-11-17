@@ -84,7 +84,12 @@ for (const [name, url, role] of PAGES) {
 
   // --- клавиатура: проходим Tab и фиксируем, виден ли фокус ---
   const tabStops = [];
-  await page.evaluate(() => document.activeElement && document.activeElement.blur());
+  // старт обхода — с начала документа (на странице входа поле email получает autofocus)
+  await page.evaluate(() => {
+    if (document.activeElement) document.activeElement.blur();
+    window.scrollTo(0, 0);
+    document.body.setAttribute('tabindex', '-1'); document.body.focus(); document.body.removeAttribute('tabindex');
+  });
   for (let i = 0; i < 80; i++) {
     await page.keyboard.press('Tab');
     const info = await page.evaluate(() => {
