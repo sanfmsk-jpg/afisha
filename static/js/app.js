@@ -47,16 +47,34 @@
     });
   }
 
-  /* Вкладки личного кабинета */
+  /* Вкладки личного кабинета: шаблон ARIA «Tabs» (клик, стрелки, Home/End) */
   var tabs = document.getElementById('tabs');
   if (tabs) {
-    tabs.addEventListener('click', function (ev) {
-      var tab = ev.target.closest('.tab');
-      if (!tab) { return; }
-      tabs.querySelectorAll('.tab').forEach(function (t) { t.classList.remove('is-on'); });
-      tab.classList.add('is-on');
+    var tabList = Array.prototype.slice.call(tabs.querySelectorAll('.tab'));
+    var select = function (tab, focus) {
+      tabList.forEach(function (t) {
+        var on = t === tab;
+        t.classList.toggle('is-on', on);
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+      });
       document.querySelectorAll('.tabpane').forEach(function (p) { p.classList.remove('is-on'); });
       document.getElementById('pane-' + tab.dataset.tab).classList.add('is-on');
+      if (focus) { tab.focus(); }
+    };
+    tabs.addEventListener('click', function (ev) {
+      var tab = ev.target.closest('.tab');
+      if (tab) { select(tab, false); }
+    });
+    tabs.addEventListener('keydown', function (ev) {
+      var i = tabList.indexOf(document.activeElement);
+      if (i < 0) { return; }
+      var next = null;
+      if (ev.key === 'ArrowRight') { next = tabList[(i + 1) % tabList.length]; }
+      if (ev.key === 'ArrowLeft') { next = tabList[(i - 1 + tabList.length) % tabList.length]; }
+      if (ev.key === 'Home') { next = tabList[0]; }
+      if (ev.key === 'End') { next = tabList[tabList.length - 1]; }
+      if (next) { ev.preventDefault(); select(next, true); }
     });
   }
 }());

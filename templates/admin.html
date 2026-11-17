@@ -19,9 +19,11 @@
 </div>
 
 <h2 class="section-h">Все мероприятия</h2>
+<div class="table-wrap" role="region" aria-label="Все мероприятия" tabindex="0">
 <table class="table table--admin">
-  <thead><tr><th>№</th><th>Название</th><th>Категория</th><th>Город</th>
-    <th>Дата</th><th>Цена</th><th>Статус</th><th>Действия</th></tr></thead>
+  <caption class="visually-hidden">Все мероприятия</caption>
+  <thead><tr><th scope="col">№</th><th scope="col">Название</th><th scope="col">Категория</th><th scope="col">Город</th>
+    <th scope="col">Дата</th><th scope="col">Цена</th><th scope="col">Статус</th><th scope="col">Действия</th></tr></thead>
   <tbody>
   {% for e in events %}
     <tr>
@@ -33,14 +35,15 @@
       <td class="nowrap">{{ e|price }}</td>
       <td><span class="badge badge--{{ e.status }}">{{ e.status|status }}</span></td>
       <td class="row-actions">
-        <a href="{{ url_for('event_edit', event_id=e.id) }}">Изменить</a>
+        <a href="{{ url_for('event_edit', event_id=e.id) }}">Изменить<span class="visually-hidden">: {{ e.title }}</span></a>
         <form method="post" action="{{ url_for('event_delete', event_id=e.id) }}"
               onsubmit="return confirm('Удалить мероприятие?')">
-          <button type="submit" class="link-danger">Удалить</button>
+          <button type="submit" class="link-danger">Удалить<span class="visually-hidden">: {{ e.title }}</span></button>
         </form>
       </td>
     </tr>
   {% endfor %}
   </tbody>
 </table>
+</div>
 {% endblock %}

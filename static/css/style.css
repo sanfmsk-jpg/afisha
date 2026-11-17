@@ -52,7 +52,7 @@ h1, h2, h3 { line-height: 1.22; margin: 0; letter-spacing: -.01em; }
 
 /* --- Шапка ---------------------------------------------------------------- */
 .topbar { background: var(--surface); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 20; }
-.topbar__in { display: flex; align-items: center; justify-content: space-between; height: 66px; gap: 24px; }
+.topbar__in { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; min-height: 66px; padding-block: 8px; gap: 8px 24px; }
 .logo { display: flex; align-items: center; gap: 10px; color: var(--ink); }
 .logo:hover { text-decoration: none; }
 .logo__mark {
@@ -62,7 +62,7 @@ h1, h2, h3 { line-height: 1.22; margin: 0; letter-spacing: -.01em; }
 }
 .logo__text { font-size: 17px; font-weight: 600; }
 .logo__text b { font-weight: 400; color: var(--ink-2); margin-left: 5px; }
-.nav { display: flex; align-items: center; gap: 20px; font-size: 15px; }
+.nav { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 20px; font-size: 15px; }
 .nav a { color: var(--ink-2); white-space: nowrap; }
 .nav a:hover { color: var(--ink); text-decoration: none; }
 .nav__user { color: var(--ink); font-weight: 600; }
@@ -262,6 +262,9 @@ h1, h2, h3 { line-height: 1.22; margin: 0; letter-spacing: -.01em; }
 .tabpane.is-on { display: block; }
 
 /* --- Таблицы ------------------------------------------------------------- */
+/* Широкая таблица прокручивается внутри контейнера, страница целиком — нет (WCAG 1.4.10) */
+.table-wrap { overflow-x: auto; border-radius: var(--radius); }
+.table-wrap .table { min-width: 640px; }
 .table {
   width: 100%; border-collapse: collapse; background: var(--surface);
   border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; font-size: 14.5px;
@@ -348,7 +351,7 @@ h1, h2, h3 { line-height: 1.22; margin: 0; letter-spacing: -.01em; }
   .nav .btn { padding: 8px 12px; font-size: 13.5px; }
   .hero { padding: 24px 0 16px; }
   .hero h1 { font-size: 27px; }
-  .topbar__in { height: 58px; gap: 12px; }
+  .topbar__in { min-height: 58px; gap: 8px 12px; }
   .logo__text b { display: none; }
   .nav { gap: 12px; font-size: 14px; }
   .nav__user { display: none; }
@@ -359,7 +362,6 @@ h1, h2, h3 { line-height: 1.22; margin: 0; letter-spacing: -.01em; }
   .filters__row--foot { align-items: stretch; flex-direction: column; }
   .stats { width: 100%; }
   .stat { flex: 1; min-width: 0; padding: 11px 8px; }
-  .table { display: block; overflow-x: auto; }
   .mod__reject input { width: 100%; }
   .mod__acts form { width: 100%; }
 }

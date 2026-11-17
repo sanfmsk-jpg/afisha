@@ -15,12 +15,16 @@
 </section>
 
 {% set tab = request.args.get('tab', 'plan') %}
-<div class="tabs" id="tabs">
-  <button class="tab {% if tab == 'plan' %}is-on{% endif %}" data-tab="plan">Пойду ({{ upcoming|length }})</button>
-  <button class="tab {% if tab == 'hist' %}is-on{% endif %}" data-tab="hist">История посещений ({{ visits|length }})</button>
+<div class="tabs" id="tabs" role="tablist" aria-label="Разделы личного кабинета">
+  <button class="tab {% if tab == 'plan' %}is-on{% endif %}" data-tab="plan" type="button" role="tab"
+          id="tab-plan" aria-controls="pane-plan" aria-selected="{{ 'true' if tab == 'plan' else 'false' }}"
+          tabindex="{{ 0 if tab == 'plan' else -1 }}">Пойду ({{ upcoming|length }})</button>
+  <button class="tab {% if tab == 'hist' %}is-on{% endif %}" data-tab="hist" type="button" role="tab"
+          id="tab-hist" aria-controls="pane-hist" aria-selected="{{ 'true' if tab == 'hist' else 'false' }}"
+          tabindex="{{ 0 if tab == 'hist' else -1 }}">История посещений ({{ visits|length }})</button>
 </div>
 
-<section class="tabpane {% if tab == 'plan' %}is-on{% endif %}" id="pane-plan">
+<section class="tabpane {% if tab == 'plan' %}is-on{% endif %}" id="pane-plan" role="tabpanel" aria-labelledby="tab-plan">
   {% if upcoming %}
     <div class="grid">{% for e in upcoming %}{{ card(e, favs, compact=True) }}{% endfor %}</div>
   {% else %}
@@ -33,11 +37,13 @@
   {% endif %}
 </section>
 
-<section class="tabpane {% if tab == 'hist' %}is-on{% endif %}" id="pane-hist">
+<section class="tabpane {% if tab == 'hist' %}is-on{% endif %}" id="pane-hist" role="tabpanel" aria-labelledby="tab-hist">
   {% if visits %}
+  <div class="table-wrap" role="region" aria-label="История посещений" tabindex="0">
   <table class="table">
-    <thead><tr><th>Дата посещения</th><th>Мероприятие</th><th>Категория</th>
-      <th>Город</th><th>Оценка</th><th>Отзыв</th></tr></thead>
+  <caption class="visually-hidden">История посещений мероприятий</caption>
+    <thead><tr><th scope="col">Дата посещения</th><th scope="col">Мероприятие</th><th scope="col">Категория</th>
+      <th scope="col">Город</th><th scope="col">Оценка</th><th scope="col">Отзыв</th></tr></thead>
     <tbody>
     {% for v in visits %}
       <tr>
@@ -46,12 +52,13 @@
             <br><small>{{ v.venue }}</small></td>
         <td><span class="tag" style="--accent: {{ v.accent }}">{{ v.category }}</span></td>
         <td>{{ v.city }}</td>
-        <td class="rating">{% if v.rating %}{{ '★' * v.rating }}{% else %}&mdash;{% endif %}</td>
+        <td class="rating">{% if v.rating %}<span aria-hidden="true">{{ '★' * v.rating }}</span><span class="visually-hidden">{{ v.rating }} из 5</span>{% else %}&mdash;<span class="visually-hidden">нет оценки</span>{% endif %}</td>
         <td class="muted">{{ v.comment }}</td>
       </tr>
     {% endfor %}
     </tbody>
   </table>
+  </div>
   {% else %}
     <div class="empty"><p><b>История посещений пуста.</b></p>
       <p>Отметьте посещение на странице мероприятия — запись появится в этом разделе.</p></div>

@@ -21,14 +21,14 @@
     <p class="mod__sum">{{ e.summary }}</p>
     <div class="mod__acts">
       <form method="post" action="{{ url_for('moderate', event_id=e.id, action='publish') }}">
-        <button class="btn" type="submit">Опубликовать</button>
+        <button class="btn" type="submit">Опубликовать<span class="visually-hidden">: {{ e.title }}</span></button>
       </form>
       <form method="post" action="{{ url_for('moderate', event_id=e.id, action='reject') }}" class="mod__reject">
         <label class="visually-hidden" for="reason-{{ e.id }}">Причина отклонения: {{ e.title }}</label>
         <input type="text" id="reason-{{ e.id }}" name="reason" placeholder="Причина отклонения">
-        <button class="btn btn--danger" type="submit">Отклонить</button>
+        <button class="btn btn--danger" type="submit">Отклонить<span class="visually-hidden">: {{ e.title }}</span></button>
       </form>
-      <a class="btn btn--ghost" href="{{ url_for('event_edit', event_id=e.id) }}">Изменить</a>
+      <a class="btn btn--ghost" href="{{ url_for('event_edit', event_id=e.id) }}">Изменить<span class="visually-hidden">: {{ e.title }}</span></a>
     </div>
   </article>
   {% endfor %}
@@ -39,16 +39,19 @@
 
 {% if rejected %}
 <h2 class="section-h">Отклонённые заявки</h2>
+<div class="table-wrap" role="region" aria-label="Отклонённые заявки" tabindex="0">
 <table class="table">
-  <thead><tr><th>№</th><th>Название</th><th>Город</th><th>Причина отклонения</th><th>Действие</th></tr></thead>
+  <caption class="visually-hidden">Отклонённые заявки</caption>
+  <thead><tr><th scope="col">№</th><th scope="col">Название</th><th scope="col">Город</th><th scope="col">Причина отклонения</th><th scope="col">Действие</th></tr></thead>
   <tbody>
   {% for e in rejected %}
     <tr><td>{{ e.id }}</td><td>{{ e.title }}</td><td>{{ e.city }}</td>
       <td class="muted">{{ e.reject_reason }}</td>
       <td><form method="post" action="{{ url_for('moderate', event_id=e.id, action='publish') }}">
-        <button class="link" type="submit">Опубликовать</button></form></td></tr>
+        <button class="link" type="submit">Опубликовать<span class="visually-hidden">: {{ e.title }}</span></button></form></td></tr>
   {% endfor %}
   </tbody>
 </table>
+</div>
 {% endif %}
 {% endblock %}
