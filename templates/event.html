@@ -2,10 +2,10 @@
 {% from '_card.html' import card %}
 {% block title %}{{ event.title }} — Афиша мероприятий{% endblock %}
 {% block content %}
-<nav class="crumbs">
+<nav class="crumbs" aria-label="Хлебные крошки">
   <a href="{{ url_for('catalog') }}">Каталог</a> /
   <a href="{{ url_for('catalog', category=event.category_slug) }}">{{ event.category }}</a> /
-  <span>{{ event.title }}</span>
+  <span aria-current="page">{{ event.title }}</span>
 </nav>
 
 <article class="event">
