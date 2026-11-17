@@ -36,6 +36,12 @@ main:focus { outline: none; }
 
 a { color: var(--brand); text-decoration: none; }
 a:hover { text-decoration: underline; }
+/* Ссылки внутри текста отличаются не только цветом, но и подчёркиванием (WCAG 1.4.1) */
+p a:not(.btn), .crumbs a { text-decoration: underline; text-underline-offset: 2px; }
+
+/* Заметный контур фокуса для всех интерактивных элементов (WCAG 2.4.7) */
+:focus-visible { outline: 3px solid var(--brand); outline-offset: 2px; }
+.chip:focus-within { outline: 3px solid var(--brand); outline-offset: 2px; }
 h1, h2, h3 { line-height: 1.22; margin: 0; letter-spacing: -.01em; }
 
 .wrap { width: min(1180px, 100% - 40px); margin-inline: auto; }
