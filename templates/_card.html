@@ -1,7 +1,7 @@
 {% macro card(e, favs, compact=False) %}
 <article class="card" data-id="{{ e.id }}">
   <a class="card__cover" href="{{ url_for('event_page', event_id=e.id) }}"
-     style="--accent: {{ e.accent }}">
+     style="--accent: {{ e.accent }}" aria-hidden="true" tabindex="-1">
     <span class="card__cat">{{ e.category }}</span>
     <span class="card__day">{{ e.starts_at[8:10] }}<small>{{ e.starts_at|rudate(with_time=False) }}</small></span>
   </a>
@@ -14,10 +14,11 @@
       <span class="price {% if e.is_free %}price--free{% endif %}">{{ e|price }}</span>
       <button class="fav {% if e.id in favs %}is-on{% endif %}"
               data-event="{{ e.id }}" type="button"
-              aria-label="Добавить в «Пойду»">
-        <span class="fav__ico">&#10003;</span>
-        <span class="fav__label">{% if e.id in favs %}Пойду{% else %}Пойду{% endif %}</span>
+              aria-pressed="{{ 'true' if e.id in favs else 'false' }}">
+        <span class="fav__ico" aria-hidden="true">&#10003;</span>
+        <span class="fav__label">Пойду</span>
         <span class="fav__count">{{ e.fav_count }}</span>
+        <span class="visually-hidden">: {{ e.title }}</span>
       </button>
     </div>
   </div>

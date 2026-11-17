@@ -33,6 +33,10 @@ body {
 }
 .skip-link:focus { top: 0; text-decoration: none; }
 main:focus { outline: none; }
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; border: 0;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
 
 a { color: var(--brand); text-decoration: none; }
 a:hover { text-decoration: underline; }

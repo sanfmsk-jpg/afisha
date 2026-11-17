@@ -16,6 +16,7 @@
     }).then(function (data) {
       if (!data) { return; }
       btn.classList.toggle('is-on', data.added);
+      btn.setAttribute('aria-pressed', data.added ? 'true' : 'false');
       btn.querySelector('.fav__count').textContent = data.count;
     }).catch(function () { location.href = '/login'; });
   });

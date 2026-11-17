@@ -28,10 +28,12 @@
       <dt>Стоимость</dt><dd class="specs__price">{{ event|price }}</dd>
     </dl>
     <button class="fav fav--big {% if event.id in favs %}is-on{% endif %}"
-            data-event="{{ event.id }}" type="button">
-      <span class="fav__ico">&#10003;</span>
+            data-event="{{ event.id }}" type="button"
+            aria-pressed="{{ 'true' if event.id in favs else 'false' }}">
+      <span class="fav__ico" aria-hidden="true">&#10003;</span>
       <span class="fav__label">Пойду</span>
       <span class="fav__count">{{ event.fav_count }}</span>
+      <span class="visually-hidden">: {{ event.title }}</span>
     </button>
     {% if user %}
     <form class="visit" method="post" action="{{ url_for('mark_visit', event_id=event.id) }}">
