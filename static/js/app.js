@@ -21,7 +21,9 @@
     }).catch(function () { location.href = '/login'; });
   });
 
-  /* Шаблоны периода: выбор отключает ручной ввод дат */
+  /* Шаблоны периода: выбор отключает ручной ввод дат.
+     Автоматическая отправка формы при смене значения убрана (WCAG 3.2.2):
+     применить фильтры можно кнопкой «Показать» или клавишей Enter. */
   var form = document.getElementById('filters');
   if (form) {
     var presets = form.querySelectorAll('.chip input');
@@ -33,7 +35,6 @@
         if (radio.value !== 'all') {
           manual.forEach(function (i) { i.value = ''; });
         }
-        form.submit();
       });
     });
     manual.forEach(function (input) {
@@ -43,9 +44,6 @@
         form.querySelectorAll('.chip').forEach(function (c) { c.classList.remove('is-on'); });
         if (all) { all.closest('.chip').classList.add('is-on'); }
       });
-    });
-    form.querySelectorAll('select, input[type="checkbox"]').forEach(function (el) {
-      el.addEventListener('change', function () { form.submit(); });
     });
   }
 

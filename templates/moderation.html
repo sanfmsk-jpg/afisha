@@ -24,7 +24,8 @@
         <button class="btn" type="submit">Опубликовать</button>
       </form>
       <form method="post" action="{{ url_for('moderate', event_id=e.id, action='reject') }}" class="mod__reject">
-        <input type="text" name="reason" placeholder="Причина отклонения">
+        <label class="visually-hidden" for="reason-{{ e.id }}">Причина отклонения: {{ e.title }}</label>
+        <input type="text" id="reason-{{ e.id }}" name="reason" placeholder="Причина отклонения">
         <button class="btn btn--danger" type="submit">Отклонить</button>
       </form>
       <a class="btn btn--ghost" href="{{ url_for('event_edit', event_id=e.id) }}">Изменить</a>

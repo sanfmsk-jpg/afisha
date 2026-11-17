@@ -39,13 +39,14 @@
     <form class="visit" method="post" action="{{ url_for('mark_visit', event_id=event.id) }}">
       <span class="visit__label">Отметить посещение</span>
       <div class="visit__row">
-        <select name="rating" aria-label="Оценка">
+        <select name="rating" aria-label="Оценка от 1 до 5">
           <option value="">Оценка</option>
           {% for i in range(5, 0, -1) %}<option value="{{ i }}">{{ i }}</option>{% endfor %}
         </select>
         <button class="btn btn--ghost" type="submit">Добавить в историю</button>
       </div>
-      <input type="text" name="comment" placeholder="Короткий отзыв">
+      <label class="visually-hidden" for="visit-comment">Короткий отзыв</label>
+      <input type="text" id="visit-comment" name="comment" placeholder="Короткий отзыв">
     </form>
     {% endif %}
   </aside>
