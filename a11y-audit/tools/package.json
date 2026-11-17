@@ -1,0 +1,11 @@
+{
+  "name": "afisha-a11y-audit",
+  "private": true,
+  "type": "module",
+  "description": "Скрипты аудита доступности сайта «Афиша мероприятий»",
+  "dependencies": {
+    "axe-core": "^4.14.1",
+    "lighthouse": "^13.6.0",
+    "puppeteer-core": "^25.18.1"
+  }
+}

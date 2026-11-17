@@ -1,0 +1,3431 @@
+{
+  "catalog": {
+    "url": "/",
+    "axe": {
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "tags": [
+            "wcag21a",
+            "wcag253"
+          ],
+          "nodes": [
+            {
+              "target": "button[data-event=\"9\"]",
+              "html": "<button class=\"fav \" data-event=\"9\" type=\"button\" aria-label=\"Добавить в «Пойду»\">\n        <span class=\"fav__ico\">✓</span>\n        <span cla",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": "button[data-event=\"11\"]",
+              "html": "<button class=\"fav \" data-event=\"11\" type=\"button\" aria-label=\"Добавить в «Пойду»\">\n        <span class=\"fav__ico\">✓</span>\n        <span cl",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": "button[data-event=\"6\"]",
+              "html": "<button class=\"fav \" data-event=\"6\" type=\"button\" aria-label=\"Добавить в «Пойду»\">\n        <span class=\"fav__ico\">✓</span>\n        <span cla",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": "button[data-event=\"16\"]",
+              "html": "<button class=\"fav \" data-event=\"16\" type=\"button\" aria-label=\"Добавить в «Пойду»\">\n        <span class=\"fav__ico\">✓</span>\n        <span cl",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": "button[data-event=\"13\"]",
+              "html": "<button class=\"fav \" data-event=\"13\" type=\"button\" aria-label=\"Добавить в «Пойду»\">\n        <span class=\"fav__ico\">✓</span>\n        <span cl",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": "button[data-event=\"14\"]",
+              "html": "<button class=\"fav \" data-event=\"14\" type=\"button\" aria-label=\"Добавить в «Пойду»\">\n        <span class=\"fav__ico\">✓</span>\n        <span cl",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": "button[data-event=\"15\"]",
+              "html": "<button class=\"fav \" data-event=\"15\" type=\"button\" aria-label=\"Добавить в «Пойду»\">\n        <span class=\"fav__ico\">✓</span>\n        <span cl",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "passes": 34,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "count": 36
+        }
+      ]
+    },
+    "manual": {
+      "lang": "ru",
+      "title": "Афиша мероприятий",
+      "headings": [
+        "H1: Куда пойти",
+        "H2: Найдено мероприятий: 7",
+        "H3: Кулинарный мастер-класс: паста ручной ра",
+        "H3: Иммерсивный спектакль «Дом у реки»",
+        "H3: Фотовыставка «Город сверху»",
+        "H3: Мастер-класс по каллиграфии",
+        "H3: Лекция «История архитектуры конструктиви",
+        "H3: Концерт органной музыки в соборе",
+        "H3: Выставка современной скульптуры «Форма и"
+      ],
+      "h1count": 1,
+      "images": 0,
+      "imagesNoAlt": 0,
+      "landmarks": [
+        "header=1",
+        "nav=1",
+        "main=1",
+        "footer=1"
+      ],
+      "skipLink": false
+    },
+    "tabStops": [
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "А Афишамероприятий",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 215,
+        "h": 34,
+        "y": 16
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Каталог",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 56,
+        "h": 23,
+        "y": 21
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Вход",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 36,
+        "h": 23,
+        "y": 21
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Регистрация",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 133,
+        "h": 45,
+        "y": 10
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "input[radio]",
+        "label": "period",
+        "outlineSelf": false,
+        "outlineHolder": false,
+        "boxShadow": false,
+        "opacity": "0",
+        "w": 87,
+        "h": 35,
+        "y": 255
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "input[date]",
+        "label": "Дата начала",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 148,
+        "h": 45,
+        "y": 345
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "input[date]",
+        "label": "Дата окончания",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 148,
+        "h": 45,
+        "y": 345
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "select[select-one]",
+        "label": "Все города Екатеринбург Казань",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 172,
+        "h": 39,
+        "y": 351
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "select[select-one]",
+        "label": "Все категории Концерты Выставк",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 153,
+        "h": 39,
+        "y": 351
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "select[select-one]",
+        "label": "По дате По цене По популярност",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 164,
+        "h": 39,
+        "y": 351
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "input[search]",
+        "label": "q",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 277,
+        "h": 43,
+        "y": 347
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "input[checkbox]",
+        "label": "free",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 17,
+        "h": 17,
+        "y": 422
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Сбросить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 110,
+        "h": 45,
+        "y": 408
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Показать",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 106,
+        "h": 45,
+        "y": 408
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Мастер-классы 1818 ноября, ср",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 379,
+        "h": 132,
+        "y": 536
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Кулинарный мастер-класс: паста",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 332,
+        "h": 40,
+        "y": 683
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[button]",
+        "label": "Добавить в «Пойду»",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 100,
+        "h": 37,
+        "y": 845
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Театр 1919 ноября, чт",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 379,
+        "h": 132,
+        "y": 536
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Иммерсивный спектакль «Дом у р",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 312,
+        "h": 20,
+        "y": 683
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[button]",
+        "label": "Добавить в «Пойду»",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 100,
+        "h": 37,
+        "y": 845
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Выставки 2020 ноября, пт",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 379,
+        "h": 132,
+        "y": 536
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Фотовыставка «Город сверху»",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 247,
+        "h": 20,
+        "y": 683
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[button]",
+        "label": "Добавить в «Пойду»",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 100,
+        "h": 37,
+        "y": 845
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Мастер-классы 2121 ноября, сб",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 379,
+        "h": 132,
+        "y": 918
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Мастер-класс по каллиграфии",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 250,
+        "h": 20,
+        "y": 1065
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[button]",
+        "label": "Добавить в «Пойду»",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 100,
+        "h": 37,
+        "y": 1227
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Лекции 2222 ноября, вс",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 379,
+        "h": 132,
+        "y": 918
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Лекция «История архитектуры ко",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 248,
+        "h": 40,
+        "y": 1065
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[button]",
+        "label": "Добавить в «Пойду»",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 100,
+        "h": 37,
+        "y": 1227
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Концерты 2525 ноября, ср",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 379,
+        "h": 132,
+        "y": 918
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Концерт органной музыки в собо",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 290,
+        "h": 20,
+        "y": 1065
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[button]",
+        "label": "Добавить в «Пойду»",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 100,
+        "h": 37,
+        "y": 1227
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Выставки 2727 ноября, пт",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 379,
+        "h": 132,
+        "y": 1300
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Выставка современной скульптур",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 290,
+        "h": 40,
+        "y": 1447
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[button]",
+        "label": "Добавить в «Пойду»",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 100,
+        "h": 37,
+        "y": 1609
+      }
+    ],
+    "zoom": {
+      "scrollW": 640,
+      "clientW": 640,
+      "hOverflow": false
+    }
+  },
+  "event": {
+    "url": "/event/1",
+    "axe": {
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "tags": [
+            "wcag21a",
+            "wcag253"
+          ],
+          "nodes": [
+            {
+              "target": "button[data-event=\"14\"]",
+              "html": "<button class=\"fav \" data-event=\"14\" type=\"button\" aria-label=\"Добавить в «Пойду»\">\n        <span class=\"fav__ico\">✓</span>\n        <span cl",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "tags": [],
+          "nodes": [
+            {
+              "target": ".nav",
+              "html": "<nav class=\"nav\">\n      <a class=\"nav__catalog\" href=\"/\">Каталог</a>\n      \n        <a href=\"/login\">Вход</a>\n        <a class=\"btn\" href=\"/",
+              "summary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+            }
+          ]
+        },
+        {
+          "id": "link-in-text-block",
+          "impact": "serious",
+          "help": "Links must be distinguishable without relying on color",
+          "tags": [
+            "wcag2a",
+            "wcag141"
+          ],
+          "nodes": [
+            {
+              "target": ".crumbs > a[href=\"/\"]",
+              "html": "<a href=\"/\">Каталог</a>",
+              "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.03:1 with the surrounding text. (Minimum contrast is 3:1, link text: #3d4ee8, surrounding text: #5a6070)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+            },
+            {
+              "target": "a[href=\"/?category=concert\"]",
+              "html": "<a href=\"/?category=concert\">Концерты</a>",
+              "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.03:1 with the surrounding text. (Minimum contrast is 3:1, link text: #3d4ee8, surrounding text: #5a6070)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+            }
+          ]
+        }
+      ],
+      "passes": 32,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "count": 9
+        }
+      ]
+    },
+    "manual": {
+      "lang": "ru",
+      "title": "Симфонический оркестр: Чайковский и Рахманинов — Афиша мероприятий",
+      "headings": [
+        "H1: Симфонический оркестр: Чайковский и Рахм",
+        "H2: Похожие мероприятия",
+        "H3: Концерт органной музыки в соборе"
+      ],
+      "h1count": 1,
+      "images": 0,
+      "imagesNoAlt": 0,
+      "landmarks": [
+        "header=1",
+        "nav=2",
+        "main=1",
+        "footer=1"
+      ],
+      "skipLink": false
+    },
+    "tabStops": [
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "А Афишамероприятий",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 215,
+        "h": 34,
+        "y": 16
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Каталог",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 56,
+        "h": 23,
+        "y": 21
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Вход",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 36,
+        "h": 23,
+        "y": 21
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Регистрация",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 133,
+        "h": 45,
+        "y": 10
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Каталог",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 51,
+        "h": 16,
+        "y": 89
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Концерты",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 63,
+        "h": 16,
+        "y": 89
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[button]",
+        "label": "✓ Пойду 1",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 320,
+        "h": 49,
+        "y": 532
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Концерты 2525 ноября, ср",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 379,
+        "h": 132,
+        "y": 658
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Концерт органной музыки в собо",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 290,
+        "h": 20,
+        "y": 805
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[button]",
+        "label": "Добавить в «Пойду»",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 100,
+        "h": 37,
+        "y": 898
+      }
+    ],
+    "zoom": {
+      "scrollW": 640,
+      "clientW": 640,
+      "hOverflow": false
+    }
+  },
+  "login": {
+    "url": "/login",
+    "axe": {
+      "violations": [
+        {
+          "id": "link-in-text-block",
+          "impact": "serious",
+          "help": "Links must be distinguishable without relying on color",
+          "tags": [
+            "wcag2a",
+            "wcag141"
+          ],
+          "nodes": [
+            {
+              "target": ".auth__alt > a[href$=\"register\"]",
+              "html": "<a href=\"/register\">Зарегистрируйтесь</a>",
+              "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.03:1 with the surrounding text. (Minimum contrast is 3:1, link text: #3d4ee8, surrounding text: #5a6070)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+            }
+          ]
+        }
+      ],
+      "passes": 27,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "count": 1
+        }
+      ]
+    },
+    "manual": {
+      "lang": "ru",
+      "title": "Вход — Афиша мероприятий",
+      "headings": [
+        "H1: Вход в личный кабинет"
+      ],
+      "h1count": 1,
+      "images": 0,
+      "imagesNoAlt": 0,
+      "landmarks": [
+        "header=1",
+        "nav=1",
+        "main=1",
+        "footer=1"
+      ],
+      "skipLink": false
+    },
+    "tabStops": [
+      {
+        "seen": false,
+        "same": false,
+        "tag": "input[password]",
+        "label": "password",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 374,
+        "h": 43,
+        "y": 355
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Войти",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 374,
+        "h": 43,
+        "y": 412
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Зарегистрируйтесь",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 133,
+        "h": 17,
+        "y": 494
+      }
+    ],
+    "zoom": {
+      "scrollW": 640,
+      "clientW": 640,
+      "hOverflow": false
+    }
+  },
+  "register": {
+    "url": "/register",
+    "axe": {
+      "violations": [
+        {
+          "id": "link-in-text-block",
+          "impact": "serious",
+          "help": "Links must be distinguishable without relying on color",
+          "tags": [
+            "wcag2a",
+            "wcag141"
+          ],
+          "nodes": [
+            {
+              "target": ".auth__alt > a[href$=\"login\"]",
+              "html": "<a href=\"/login\">Войдите</a>",
+              "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.03:1 with the surrounding text. (Minimum contrast is 3:1, link text: #3d4ee8, surrounding text: #5a6070)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+            }
+          ]
+        }
+      ],
+      "passes": 28,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "count": 1
+        }
+      ]
+    },
+    "manual": {
+      "lang": "ru",
+      "title": "Регистрация — Афиша мероприятий",
+      "headings": [
+        "H1: Регистрация"
+      ],
+      "h1count": 1,
+      "images": 0,
+      "imagesNoAlt": 0,
+      "landmarks": [
+        "header=1",
+        "nav=1",
+        "main=1",
+        "footer=1"
+      ],
+      "skipLink": false
+    },
+    "tabStops": [
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "А Афишамероприятий",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 215,
+        "h": 34,
+        "y": 16
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Каталог",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 56,
+        "h": 23,
+        "y": 21
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Вход",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 36,
+        "h": 23,
+        "y": 21
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Регистрация",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 133,
+        "h": 45,
+        "y": 10
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "input[text]",
+        "label": "full_name",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 374,
+        "h": 43,
+        "y": 272
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "input[email]",
+        "label": "email",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 374,
+        "h": 43,
+        "y": 355
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "input[password]",
+        "label": "password",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 374,
+        "h": 43,
+        "y": 437
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "select[select-one]",
+        "label": "ЕкатеринбургКазаньМоскваНижний",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 374,
+        "h": 39,
+        "y": 520
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Зарегистрироваться",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 374,
+        "h": 43,
+        "y": 573
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Войдите",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 58,
+        "h": 17,
+        "y": 655
+      }
+    ],
+    "zoom": {
+      "scrollW": 640,
+      "clientW": 640,
+      "hOverflow": false
+    }
+  },
+  "profile": {
+    "url": "/profile",
+    "axe": {
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "tags": [
+            "wcag21a",
+            "wcag253"
+          ],
+          "nodes": [
+            {
+              "target": "button[data-event=\"4\"]",
+              "html": "<button class=\"fav is-on\" data-event=\"4\" type=\"button\" aria-label=\"Добавить в «Пойду»\">\n        <span class=\"fav__ico\">✓</span>\n        <spa",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": "button[data-event=\"7\"]",
+              "html": "<button class=\"fav is-on\" data-event=\"7\" type=\"button\" aria-label=\"Добавить в «Пойду»\">\n        <span class=\"fav__ico\">✓</span>\n        <spa",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": "button[data-event=\"1\"]",
+              "html": "<button class=\"fav is-on\" data-event=\"1\" type=\"button\" aria-label=\"Добавить в «Пойду»\">\n        <span class=\"fav__ico\">✓</span>\n        <spa",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": "button[data-event=\"12\"]",
+              "html": "<button class=\"fav is-on\" data-event=\"12\" type=\"button\" aria-label=\"Добавить в «Пойду»\">\n        <span class=\"fav__ico\">✓</span>\n        <sp",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": "button[data-event=\"10\"]",
+              "html": "<button class=\"fav is-on\" data-event=\"10\" type=\"button\" aria-label=\"Добавить в «Пойду»\">\n        <span class=\"fav__ico\">✓</span>\n        <sp",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        },
+        {
+          "id": "link-in-text-block",
+          "impact": "serious",
+          "help": "Links must be distinguishable without relying on color",
+          "tags": [
+            "wcag2a",
+            "wcag141"
+          ],
+          "nodes": [
+            {
+              "target": "p:nth-child(2) > a[href=\"/\"]",
+              "html": "<a href=\"/\">каталог</a>",
+              "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.03:1 with the surrounding text. (Minimum contrast is 3:1, link text: #3d4ee8, surrounding text: #5a6070)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+            }
+          ]
+        }
+      ],
+      "passes": 30,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "count": 26
+        }
+      ]
+    },
+    "manual": {
+      "lang": "ru",
+      "title": "Личный кабинет — Афиша мероприятий",
+      "headings": [
+        "H1: Личный кабинет",
+        "H2: Прошедшие из списка «Пойду»",
+        "H3: Выставка «Русский импрессионизм: свет и ",
+        "H3: Мастер-класс по гончарному делу для начи",
+        "H3: Симфонический оркестр: Чайковский и Рахм",
+        "H3: Лекция «Искусственный интеллект в веб-ра",
+        "H3: Спектакль «Вишнёвый сад»"
+      ],
+      "h1count": 1,
+      "images": 0,
+      "imagesNoAlt": 0,
+      "landmarks": [
+        "header=1",
+        "nav=1",
+        "main=1",
+        "footer=1"
+      ],
+      "skipLink": false
+    },
+    "tabStops": [
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "А Афишамероприятий",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 215,
+        "h": 34,
+        "y": 16
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Каталог",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 56,
+        "h": 23,
+        "y": 21
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Личный кабинет",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 115,
+        "h": 23,
+        "y": 21
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Выйти",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 86,
+        "h": 45,
+        "y": 10
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Пойду (0)",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 98,
+        "h": 46,
+        "y": 225
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "История посещений (4)",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 206,
+        "h": 46,
+        "y": 225
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "каталог",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 58,
+        "h": 18,
+        "y": 371
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Выставки 1111 ноября, ср",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 379,
+        "h": 132,
+        "y": 519
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Выставка «Русский импрессиониз",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 335,
+        "h": 40,
+        "y": 666
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[button]",
+        "label": "Добавить в «Пойду»",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 100,
+        "h": 37,
+        "y": 779
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Мастер-классы 1212 ноября, чт",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 379,
+        "h": 132,
+        "y": 519
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Мастер-класс по гончарному дел",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 313,
+        "h": 40,
+        "y": 666
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[button]",
+        "label": "Добавить в «Пойду»",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 100,
+        "h": 37,
+        "y": 779
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Концерты 1212 ноября, чт",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 379,
+        "h": 132,
+        "y": 519
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Симфонический оркестр: Чайковс",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 324,
+        "h": 40,
+        "y": 666
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[button]",
+        "label": "Добавить в «Пойду»",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 100,
+        "h": 37,
+        "y": 779
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Лекции 1313 ноября, пт",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 379,
+        "h": 132,
+        "y": 852
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Лекция «Искусственный интеллек",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 338,
+        "h": 40,
+        "y": 999
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[button]",
+        "label": "Добавить в «Пойду»",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 100,
+        "h": 37,
+        "y": 1112
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Театр 1616 ноября, пн",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 379,
+        "h": 132,
+        "y": 852
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Спектакль «Вишнёвый сад»",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 223,
+        "h": 20,
+        "y": 999
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[button]",
+        "label": "Добавить в «Пойду»",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 100,
+        "h": 37,
+        "y": 1112
+      }
+    ],
+    "zoom": {
+      "scrollW": 640,
+      "clientW": 640,
+      "hOverflow": false
+    }
+  },
+  "event-user": {
+    "url": "/event/1",
+    "axe": {
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "tags": [
+            "wcag21a",
+            "wcag253"
+          ],
+          "nodes": [
+            {
+              "target": "button[data-event=\"14\"]",
+              "html": "<button class=\"fav \" data-event=\"14\" type=\"button\" aria-label=\"Добавить в «Пойду»\">\n        <span class=\"fav__ico\">✓</span>\n        <span cl",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "tags": [],
+          "nodes": [
+            {
+              "target": ".nav",
+              "html": "<nav class=\"nav\">\n      <a class=\"nav__catalog\" href=\"/\">Каталог</a>\n      \n        <a href=\"/profile\">Личный кабинет</a>\n        \n        <",
+              "summary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+            }
+          ]
+        },
+        {
+          "id": "link-in-text-block",
+          "impact": "serious",
+          "help": "Links must be distinguishable without relying on color",
+          "tags": [
+            "wcag2a",
+            "wcag141"
+          ],
+          "nodes": [
+            {
+              "target": ".crumbs > a[href=\"/\"]",
+              "html": "<a href=\"/\">Каталог</a>",
+              "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.03:1 with the surrounding text. (Minimum contrast is 3:1, link text: #3d4ee8, surrounding text: #5a6070)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+            },
+            {
+              "target": "a[href=\"/?category=concert\"]",
+              "html": "<a href=\"/?category=concert\">Концерты</a>",
+              "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.03:1 with the surrounding text. (Minimum contrast is 3:1, link text: #3d4ee8, surrounding text: #5a6070)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+            }
+          ]
+        }
+      ],
+      "passes": 36,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "count": 9
+        }
+      ]
+    },
+    "manual": {
+      "lang": "ru",
+      "title": "Симфонический оркестр: Чайковский и Рахманинов — Афиша мероприятий",
+      "headings": [
+        "H1: Симфонический оркестр: Чайковский и Рахм",
+        "H2: Похожие мероприятия",
+        "H3: Концерт органной музыки в соборе"
+      ],
+      "h1count": 1,
+      "images": 0,
+      "imagesNoAlt": 0,
+      "landmarks": [
+        "header=1",
+        "nav=2",
+        "main=1",
+        "footer=1"
+      ],
+      "skipLink": false
+    },
+    "tabStops": [
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "А Афишамероприятий",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 215,
+        "h": 34,
+        "y": 16
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Каталог",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 56,
+        "h": 23,
+        "y": 21
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Личный кабинет",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 115,
+        "h": 23,
+        "y": 21
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Выйти",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 86,
+        "h": 45,
+        "y": 10
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Каталог",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 51,
+        "h": 16,
+        "y": 89
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Концерты",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 63,
+        "h": 16,
+        "y": 89
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[button]",
+        "label": "✓ Пойду 1",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 320,
+        "h": 49,
+        "y": 532
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "select[select-one]",
+        "label": "Оценка",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 92,
+        "h": 39,
+        "y": 644
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Добавить в историю",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 193,
+        "h": 39,
+        "y": 644
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "input[text]",
+        "label": "comment",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 293,
+        "h": 42,
+        "y": 693
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Концерты 2525 ноября, ср",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 379,
+        "h": 132,
+        "y": 829
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Концерт органной музыки в собо",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 290,
+        "h": 20,
+        "y": 976
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[button]",
+        "label": "Добавить в «Пойду»",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 100,
+        "h": 37,
+        "y": 1069
+      }
+    ],
+    "zoom": {
+      "scrollW": 640,
+      "clientW": 640,
+      "hOverflow": false
+    }
+  },
+  "admin": {
+    "url": "/admin",
+    "axe": {
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "tags": [
+            "wcag2aa",
+            "wcag143"
+          ],
+          "nodes": [
+            {
+              "target": "tr:nth-child(4) > td:nth-child(3) > .tag",
+              "html": "<span class=\"tag\" style=\"--accent: #0891b2\">Выставки</span>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.68 (foreground color: #ffffff, background color: #0891b2, font size: 9.4pt (12.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": "tr:nth-child(5) > td:nth-child(3) > .tag",
+              "html": "<span class=\"tag\" style=\"--accent: #0891b2\">Выставки</span>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.68 (foreground color: #ffffff, background color: #0891b2, font size: 9.4pt (12.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": "tr:nth-child(6) > td:nth-child(3) > .tag",
+              "html": "<span class=\"tag\" style=\"--accent: #0891b2\">Выставки</span>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.68 (foreground color: #ffffff, background color: #0891b2, font size: 9.4pt (12.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": "tr:nth-child(15) > td:nth-child(3) > .tag",
+              "html": "<span class=\"tag\" style=\"--accent: #0891b2\">Выставки</span>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.68 (foreground color: #ffffff, background color: #0891b2, font size: 9.4pt (12.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": "tr:nth-child(19) > td:nth-child(3) > .tag",
+              "html": "<span class=\"tag\" style=\"--accent: #0891b2\">Выставки</span>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.68 (foreground color: #ffffff, background color: #0891b2, font size: 9.4pt (12.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": "tr:nth-child(22) > td:nth-child(3) > .tag",
+              "html": "<span class=\"tag\" style=\"--accent: #0891b2\">Выставки</span>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.68 (foreground color: #ffffff, background color: #0891b2, font size: 9.4pt (12.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "passes": 29,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "count": 2
+        }
+      ]
+    },
+    "manual": {
+      "lang": "ru",
+      "title": "Админ-панель — Афиша мероприятий",
+      "headings": [
+        "H1: Админ-панель",
+        "H2: Все мероприятия"
+      ],
+      "h1count": 1,
+      "images": 0,
+      "imagesNoAlt": 0,
+      "landmarks": [
+        "header=1",
+        "nav=1",
+        "main=1",
+        "footer=1"
+      ],
+      "skipLink": false
+    },
+    "tabStops": [
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "А Афишамероприятий",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 215,
+        "h": 34,
+        "y": 16
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Каталог",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 56,
+        "h": 23,
+        "y": 21
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Личный кабинет",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 115,
+        "h": 23,
+        "y": 21
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Админ-панель",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 101,
+        "h": 23,
+        "y": 21
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Выйти",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 86,
+        "h": 45,
+        "y": 10
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Модерация (3)",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 145,
+        "h": 45,
+        "y": 122
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "+ Добавить мероприятие",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 226,
+        "h": 45,
+        "y": 122
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Симфонический оркестр: Чайковс",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 273,
+        "h": 39,
+        "y": 403
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Изменить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 66,
+        "h": 22,
+        "y": 401
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Удалить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 53,
+        "h": 16,
+        "y": 404
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Фестиваль электронной музыки «",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 282,
+        "h": 39,
+        "y": 473
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Изменить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 66,
+        "h": 22,
+        "y": 470
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Удалить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 53,
+        "h": 16,
+        "y": 473
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Акустический вечер: авторская ",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 260,
+        "h": 17,
+        "y": 543
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Изменить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 66,
+        "h": 22,
+        "y": 540
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Удалить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 53,
+        "h": 16,
+        "y": 543
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Выставка «Русский импрессиониз",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 283,
+        "h": 39,
+        "y": 595
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Изменить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 66,
+        "h": 22,
+        "y": 592
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Удалить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 53,
+        "h": 16,
+        "y": 595
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Интерактивная выставка «Цифров",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 253,
+        "h": 39,
+        "y": 665
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Изменить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 66,
+        "h": 22,
+        "y": 662
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Удалить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 53,
+        "h": 16,
+        "y": 665
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Фотовыставка «Город сверху»",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 209,
+        "h": 17,
+        "y": 735
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Изменить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 66,
+        "h": 22,
+        "y": 732
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Удалить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 53,
+        "h": 16,
+        "y": 735
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Мастер-класс по гончарному дел",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 265,
+        "h": 39,
+        "y": 787
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Изменить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 66,
+        "h": 22,
+        "y": 785
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Удалить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 53,
+        "h": 16,
+        "y": 788
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Мастер-класс «Основы акварельн",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 252,
+        "h": 39,
+        "y": 857
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Изменить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 66,
+        "h": 22,
+        "y": 855
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Удалить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 53,
+        "h": 16,
+        "y": 858
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Кулинарный мастер-класс: паста",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 280,
+        "h": 39,
+        "y": 927
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Изменить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 66,
+        "h": 22,
+        "y": 925
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Удалить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 53,
+        "h": 16,
+        "y": 928
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Спектакль «Вишнёвый сад»",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 189,
+        "h": 17,
+        "y": 997
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Изменить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 66,
+        "h": 22,
+        "y": 994
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Удалить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 53,
+        "h": 16,
+        "y": 997
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Иммерсивный спектакль «Дом у р",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 264,
+        "h": 17,
+        "y": 1049
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Изменить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 66,
+        "h": 22,
+        "y": 1047
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Удалить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 53,
+        "h": 16,
+        "y": 1050
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Лекция «Искусственный интеллек",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 252,
+        "h": 39,
+        "y": 1119
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Изменить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 66,
+        "h": 22,
+        "y": 1117
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Удалить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 53,
+        "h": 16,
+        "y": 1120
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Лекция «История архитектуры ко",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 210,
+        "h": 39,
+        "y": 1189
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Изменить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 66,
+        "h": 22,
+        "y": 1187
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Удалить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 53,
+        "h": 16,
+        "y": 1190
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Концерт органной музыки в собо",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 245,
+        "h": 17,
+        "y": 1259
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Изменить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 66,
+        "h": 22,
+        "y": 1257
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Удалить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 53,
+        "h": 16,
+        "y": 1260
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Выставка современной скульптур",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 244,
+        "h": 39,
+        "y": 1329
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Изменить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 66,
+        "h": 22,
+        "y": 1327
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Удалить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 53,
+        "h": 16,
+        "y": 1330
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Мастер-класс по каллиграфии",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 211,
+        "h": 17,
+        "y": 1399
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Изменить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 66,
+        "h": 22,
+        "y": 1397
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Удалить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 53,
+        "h": 16,
+        "y": 1400
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Рок-концерт «Новая сцена»",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 190,
+        "h": 17,
+        "y": 1469
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Изменить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 66,
+        "h": 22,
+        "y": 1466
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Удалить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 53,
+        "h": 16,
+        "y": 1469
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Мастер-класс «Вязание крючком ",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 248,
+        "h": 39,
+        "y": 1539
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Изменить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 66,
+        "h": 22,
+        "y": 1536
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Удалить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 53,
+        "h": 16,
+        "y": 1539
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Выставка-ярмарка «Сделано вруч",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 268,
+        "h": 17,
+        "y": 1609
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Изменить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 66,
+        "h": 22,
+        "y": 1606
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Удалить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 53,
+        "h": 16,
+        "y": 1609
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Эзотерический семинар «Код суд",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 265,
+        "h": 17,
+        "y": 1661
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Изменить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 66,
+        "h": 22,
+        "y": 1659
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Удалить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 53,
+        "h": 16,
+        "y": 1662
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Концерт группы «Северный ветер",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 239,
+        "h": 17,
+        "y": 1714
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Изменить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 66,
+        "h": 22,
+        "y": 1711
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Удалить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 53,
+        "h": 16,
+        "y": 1714
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Выставка «Пейзажи Севера»",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 198,
+        "h": 17,
+        "y": 1766
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Изменить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 66,
+        "h": 22,
+        "y": 1763
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Удалить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 53,
+        "h": 16,
+        "y": 1766
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Мастер-класс по латте-арту",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 194,
+        "h": 17,
+        "y": 1836
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Изменить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 66,
+        "h": 22,
+        "y": 1833
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Удалить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 53,
+        "h": 16,
+        "y": 1836
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Спектакль «Ревизор»",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 147,
+        "h": 17,
+        "y": 1888
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Изменить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 66,
+        "h": 22,
+        "y": 1886
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Удалить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 53,
+        "h": 16,
+        "y": 1889
+      }
+    ],
+    "zoom": {
+      "scrollW": 1021,
+      "clientW": 640,
+      "hOverflow": true
+    }
+  },
+  "moderation": {
+    "url": "/admin/moderation",
+    "axe": {
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "tags": [
+            "wcag2aa",
+            "wcag143"
+          ],
+          "nodes": [
+            {
+              "target": "article:nth-child(1) > .mod__head > .tag",
+              "html": "<span class=\"tag\" style=\"--accent: #0891b2\">Выставки</span>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.68 (foreground color: #ffffff, background color: #0891b2, font size: 9.4pt (12.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        },
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "help": "Heading levels should only increase by one",
+          "tags": [],
+          "nodes": [
+            {
+              "target": "article:nth-child(1) > .mod__head > h3",
+              "html": "<h3>Выставка-ярмарка «Сделано вручную»</h3>",
+              "summary": "Fix any of the following:\n  Heading order invalid"
+            }
+          ]
+        }
+      ],
+      "passes": 32,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "count": 2
+        }
+      ]
+    },
+    "manual": {
+      "lang": "ru",
+      "title": "Модерация — Афиша мероприятий",
+      "headings": [
+        "H1: Модерация мероприятий",
+        "H3: Выставка-ярмарка «Сделано вручную»",
+        "H3: Мастер-класс «Вязание крючком за один ве",
+        "H3: Рок-концерт «Новая сцена»",
+        "H2: Отклонённые заявки"
+      ],
+      "h1count": 1,
+      "images": 0,
+      "imagesNoAlt": 0,
+      "landmarks": [
+        "header=1",
+        "nav=1",
+        "main=1",
+        "footer=1"
+      ],
+      "skipLink": false
+    },
+    "tabStops": [
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "А Афишамероприятий",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 215,
+        "h": 34,
+        "y": 16
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Каталог",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 56,
+        "h": 23,
+        "y": 21
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Личный кабинет",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 115,
+        "h": 23,
+        "y": 21
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Админ-панель",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 101,
+        "h": 23,
+        "y": 21
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Выйти",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 86,
+        "h": 45,
+        "y": 10
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "К списку мероприятий",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 208,
+        "h": 45,
+        "y": 122
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Опубликовать",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 145,
+        "h": 39,
+        "y": 311
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "input[text]",
+        "label": "reason",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 230,
+        "h": 42,
+        "y": 309
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Отклонить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 118,
+        "h": 42,
+        "y": 309
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Изменить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 111,
+        "h": 45,
+        "y": 308
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Опубликовать",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 145,
+        "h": 39,
+        "y": 510
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "input[text]",
+        "label": "reason",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 230,
+        "h": 42,
+        "y": 508
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Отклонить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 118,
+        "h": 42,
+        "y": 508
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Изменить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 111,
+        "h": 45,
+        "y": 507
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Опубликовать",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 145,
+        "h": 39,
+        "y": 709
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "input[text]",
+        "label": "reason",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 230,
+        "h": 42,
+        "y": 707
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Отклонить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 118,
+        "h": 42,
+        "y": 707
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Изменить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 111,
+        "h": 45,
+        "y": 705
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Опубликовать",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 92,
+        "h": 16,
+        "y": 906
+      }
+    ],
+    "zoom": {
+      "scrollW": 771,
+      "clientW": 640,
+      "hOverflow": true
+    }
+  },
+  "event-form": {
+    "url": "/admin/events/1/edit",
+    "axe": {
+      "violations": [],
+      "passes": 28,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "count": 1
+        }
+      ]
+    },
+    "manual": {
+      "lang": "ru",
+      "title": "Изменение мероприятия",
+      "headings": [
+        "H1: Изменение мероприятия №1"
+      ],
+      "h1count": 1,
+      "images": 0,
+      "imagesNoAlt": 0,
+      "landmarks": [
+        "header=1",
+        "nav=1",
+        "main=1",
+        "footer=1"
+      ],
+      "skipLink": false
+    },
+    "tabStops": [
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "А Афишамероприятий",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 215,
+        "h": 34,
+        "y": 16
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Каталог",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 56,
+        "h": 23,
+        "y": 21
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Личный кабинет",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 115,
+        "h": 23,
+        "y": 21
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Админ-панель",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 101,
+        "h": 23,
+        "y": 21
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Выйти",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 86,
+        "h": 45,
+        "y": 10
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Отмена",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 94,
+        "h": 45,
+        "y": 122
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "input[text]",
+        "label": "title",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 560,
+        "h": 43,
+        "y": 236
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "select[select-one]",
+        "label": "Концерты Выставки Мастер-класс",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 273,
+        "h": 39,
+        "y": 236
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "select[select-one]",
+        "label": "Екатеринбург Казань Москва Ниж",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 273,
+        "h": 39,
+        "y": 236
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "input[datetime-local]",
+        "label": "starts_at",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 273,
+        "h": 45,
+        "y": 318
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "input[datetime-local]",
+        "label": "ends_at",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 273,
+        "h": 45,
+        "y": 318
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "input[text]",
+        "label": "venue",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 560,
+        "h": 43,
+        "y": 318
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "input[text]",
+        "label": "address",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 560,
+        "h": 43,
+        "y": 403
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "input[number]",
+        "label": "price_min",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 273,
+        "h": 43,
+        "y": 403
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "input[number]",
+        "label": "age_limit",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 273,
+        "h": 43,
+        "y": 403
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "input[checkbox]",
+        "label": "is_free",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 17,
+        "h": 17,
+        "y": 495
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "select[select-one]",
+        "label": "Опубликовано На модерации Откл",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 273,
+        "h": 39,
+        "y": 486
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "textarea[textarea]",
+        "label": "Программа из произведений русс",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 1134,
+        "h": 67,
+        "y": 564
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "textarea[textarea]",
+        "label": "Мероприятие проходит по адресу",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 1134,
+        "h": 136,
+        "y": 670
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "button[submit]",
+        "label": "Сохранить",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 118,
+        "h": 45,
+        "y": 824
+      },
+      {
+        "seen": false,
+        "same": false,
+        "tag": "a",
+        "label": "Отмена",
+        "outlineSelf": true,
+        "outlineHolder": true,
+        "boxShadow": false,
+        "opacity": "1",
+        "w": 94,
+        "h": 45,
+        "y": 824
+      }
+    ],
+    "zoom": {
+      "scrollW": 771,
+      "clientW": 640,
+      "hOverflow": true
+    }
+  }
+}
