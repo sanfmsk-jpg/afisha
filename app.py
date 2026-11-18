@@ -18,6 +18,10 @@ import db
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get('AFISHA_SECRET', 'afisha-dev-secret-key')
 app.config['TEMPLATES_AUTO_RELOAD'] = True
+# Номер счётчика Яндекс Метрики. Пока в переменной окружения AFISHA_YM_ID не задан
+# настоящий номер, используется заглушка и скрипт Метрики не подключается.
+YM_PLACEHOLDER = '00000000'
+app.config['YM_COUNTER_ID'] = os.environ.get('AFISHA_YM_ID', YM_PLACEHOLDER)
 
 MONTHS = ('января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля',
           'августа', 'сентября', 'октября', 'ноября', 'декабря')
@@ -79,7 +83,10 @@ def load_user():
 
 @app.context_processor
 def inject_globals():
+    ym_id = app.config['YM_COUNTER_ID']
     return {
+        'ym_id': ym_id,
+        'ym_live': ym_id.isdigit() and ym_id != YM_PLACEHOLDER,
         'user': g.user,
         'cities': db.cities(),
         'categories': db.categories(),
