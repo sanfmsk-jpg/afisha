@@ -143,6 +143,30 @@ def resolve_period(preset, date_from, date_to):
     return date_from or None, date_to or None
 
 
+# Падежные формы для заголовка посадочной страницы (объявление ↔ страница)
+CITY_IN = {'moscow': 'Москве', 'spb': 'Санкт-Петербурге', 'kazan': 'Казани',
+           'ekb': 'Екатеринбурге', 'nnov': 'Нижнем Новгороде', 'sochi': 'Сочи'}
+CATEGORY_OF = {'concert': 'концертов', 'exhibition': 'выставок',
+               'workshop': 'мастер-классов', 'theatre': 'театров',
+               'lecture': 'лекций'}
+PERIOD_PHRASE = {'today': 'сегодня', 'tomorrow': 'завтра',
+                 'weekend': 'на выходные', 'week': 'на неделю',
+                 'month': 'на месяц'}
+
+
+def landing_heading(f):
+    """Заголовок каталога под выбранные фильтры: текст страницы повторяет
+    формулировку рекламного объявления, по которому пришёл посетитель."""
+    where = ' в %s' % CITY_IN[f['city']] if f['city'] in CITY_IN else ''
+    when = PERIOD_PHRASE.get(f['period'], '')
+    if f['category'] in CATEGORY_OF:
+        head = 'Афиша %s%s' % (CATEGORY_OF[f['category']], where)
+        return head + (' ' + when if when else '')
+    if when:
+        return 'Куда сходить %s%s' % (when, where)
+    return 'Куда пойти' + where
+
+
 def read_filters():
     preset = request.args.get('period', 'all')
     date_from, date_to = resolve_period(preset,
@@ -170,7 +194,7 @@ def catalog():
                               q=f['q'], only_free=f['free'], sort=f['sort'])
     favs = db.favorite_ids(g.user['id']) if g.user else set()
     return render_template('catalog.html', events=events, f=f, favs=favs,
-                           presets=DATE_PRESETS)
+                           presets=DATE_PRESETS, heading=landing_heading(f))
 
 
 @app.route('/api/events')

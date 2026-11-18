@@ -1,10 +1,17 @@
 {% extends 'base.html' %}
 {% from '_card.html' import card %}
+{% block title %}{{ heading }} — Афиша мероприятий{% endblock %}
 {% block content %}
 
 <section class="hero">
-  <h1>Куда пойти{% if f.city %} в {{ (cities|selectattr('slug','equalto',f.city)|first).name }}{% endif %}</h1>
+  <h1>{{ heading }}</h1>
   <p>Концерты, выставки и мастер-классы в шести городах. Выберите даты — и&nbsp;увидите только то, что проходит в&nbsp;этот период.</p>
+  {% if not user %}
+  <div class="cta">
+    <p class="cta__text"><b>Отмечайте «Пойду» и ведите историю посещений.</b> Регистрация бесплатна и занимает минуту.</p>
+    <a class="btn btn--lg" href="{{ url_for('register') }}" data-goal="cta_register">Зарегистрироваться бесплатно</a>
+  </div>
+  {% endif %}
 </section>
 
 <form class="filters" id="filters" method="get" action="{{ url_for('catalog') }}">
