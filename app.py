@@ -87,6 +87,8 @@ def inject_globals():
     return {
         'ym_id': ym_id,
         'ym_live': ym_id.isdigit() and ym_id != YM_PLACEHOLDER,
+        # цель, которую нужно один раз отправить после перехода (регистрация)
+        'goal_once': session.pop('goal', None),
         'user': g.user,
         'cities': db.cities(),
         'categories': db.categories(),
@@ -218,6 +220,7 @@ def register():
                 (name, email, generate_password_hash(pwd),
                  request.form.get('city_id') or None))
             session['user_id'] = uid
+            session['goal'] = 'registration'
             flash('Регистрация завершена. Добро пожаловать!', 'ok')
             return redirect(url_for('catalog'))
     return render_template('register.html')

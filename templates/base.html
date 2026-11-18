@@ -6,7 +6,7 @@
 <title>{% block title %}Афиша мероприятий{% endblock %}</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-<body>
+<body{% if goal_once %} data-goal-once="{{ goal_once }}"{% endif %}>
 {% include '_metrika.html' %}
 <a class="skip-link" href="#main">Перейти к содержанию</a>
 <header class="topbar">

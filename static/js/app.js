@@ -2,6 +2,30 @@
 (function () {
   'use strict';
 
+  /* Цели Яндекс Метрики (тип «JavaScript-событие»).
+     Идентификаторы целей: registration, fav_add, filter_apply, cta_register.
+     Все достижения дополнительно копятся в window.afishaGoals — так цели
+     можно проверить и без настоящего счётчика (заглушка 00000000). */
+  window.afishaGoals = window.afishaGoals || [];
+  window.afishaGoal = function (name, params) {
+    window.afishaGoals.push(name);
+    var id = parseInt(window.AFISHA_YM_ID, 10);
+    if (typeof window.ym === 'function' && id) {
+      window.ym(id, 'reachGoal', name, params);
+    }
+  };
+
+  /* Цель, поставленная сервером на один показ (успешная регистрация) */
+  if (document.body.dataset.goalOnce) {
+    window.afishaGoal(document.body.dataset.goalOnce);
+  }
+
+  /* Цели по клику: любой элемент с атрибутом data-goal */
+  document.addEventListener('click', function (ev) {
+    var el = ev.target.closest('[data-goal]');
+    if (el) { window.afishaGoal(el.dataset.goal); }
+  });
+
   /* Переключение отметки «Пойду» без перезагрузки страницы */
   document.addEventListener('click', function (ev) {
     var btn = ev.target.closest('.fav');
@@ -18,6 +42,7 @@
       btn.classList.toggle('is-on', data.added);
       btn.setAttribute('aria-pressed', data.added ? 'true' : 'false');
       btn.querySelector('.fav__count').textContent = data.count;
+      if (data.added) { window.afishaGoal('fav_add'); }
     }).catch(function () { location.href = '/login'; });
   });
 
@@ -26,6 +51,7 @@
      применить фильтры можно кнопкой «Показать» или клавишей Enter. */
   var form = document.getElementById('filters');
   if (form) {
+    form.addEventListener('submit', function () { window.afishaGoal('filter_apply'); });
     var presets = form.querySelectorAll('.chip input');
     var manual = form.querySelectorAll('input[type="date"]');
     presets.forEach(function (radio) {
